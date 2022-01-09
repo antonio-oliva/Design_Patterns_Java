@@ -6,16 +6,18 @@ public class DAO_Demo {
 
 		// Print all students
 		for (Student student : studentDao.getAllStudents()) {
-			System.out.println("Student: [RollNo : " + student.getRollNo() + ", Name : " + student.getName() + " ]");
+			System.out.println("Student: [RollNo : " + student.getRollNo() + ", Name : " + student.getName() + "]");
 		}
+		
+		System.out.println("");
 
 		// Update student
-		Student student = studentDao.getAllStudents().get(0);
+		Student student = studentDao.getStudent(0);
 		student.setName("Michael");
 		studentDao.updateStudent(student);
 
 		// get the student
 		studentDao.getStudent(0);
-		System.out.println("Student: [RollNo : " + student.getRollNo() + ", Name : " + student.getName() + " ]");
+		System.out.println("Student: [RollNo : " + student.getRollNo() + ", Name : " + student.getName() + "]");
 	}
 }
